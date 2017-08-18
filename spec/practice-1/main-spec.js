@@ -39,19 +39,17 @@ describe("Person", () => {
 
   describe("Worker", () => {
 
-    it("should have field name, age and klass", () => {
-      let worker = new Worker("Tom", 21, 2);
+    it("should have field name and age", () => {
+      let worker = new Worker("Tom", 21);
       expect(worker.name).toBe("Tom");
       expect(worker.age).toBe(21);
 
     });
-    it("should overwrite Person introduce, introduce with no field", () => {
+    
+    it("should overwrite Person introduce, introduce with class name and job", () => {
       let worker = new Worker("Tom", 21);
-
       let introduce = worker.introduce();
-
       expect(introduce).toBe("My name is Tom. I am 21 years old. I am a Worker. I have a job.");
-
     });
 
   });
