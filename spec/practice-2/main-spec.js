@@ -53,16 +53,16 @@ describe("Person", () => {
 
   describe("Teacher", () => {
 
-    it("should have field name, age and klass", () => {
+    it("should have field name, age and classes", () => {
       let clazz1 = new Class(2);
       let clazz2 = new Class(3);
       let teacher = new Teacher("Joun", 21, [clazz1, clazz2]);
       expect(teacher.name).toBe("Joun");
       expect(teacher.age).toBe(21);
-      expect(teacher.clazzes).toEqual([clazz1, clazz2]);
+      expect(teacher.classes).toEqual([clazz1, clazz2]);
     });
 
-    it("should overwrite Person introduce and show all class this teacher teaches, when init two classed to this teacher",
+    it("should overwrite Person introduce and show all classes this teacher teaches",
     () => {
       let clazz1 = new Class(2);
       let clazz2 = new Class(3);
@@ -74,14 +74,11 @@ describe("Person", () => {
 
     });
 
-    it("should show no class this teacher teacher, when there is no class assgin to this teacher",
+    it("should show no class this teacher teach, when there is no class assgined to this teacher",
     () => {
       let teacher = new Teacher("Joun", 21, []);
-
       let introduce = teacher.introduce();
-
       expect(introduce).toBe("My name is Joun. I am 21 years old. I am a Teacher. I teach No Class.");
-
     });
 
   });
