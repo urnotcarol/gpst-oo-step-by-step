@@ -1,2 +1,9 @@
-// Write your code here
-module.exports = class Class {}
+function Class(number) {
+    this.number = number;
+}
+
+Class.prototype.assignLeader = function(leader) {
+    this.leader = leader;
+}
+
+module.exports = Class;
